@@ -10,7 +10,7 @@
 
   Portable .cljc."
   (:require [clojure.string :as str]
-            #?(:clj [cheshire.core :as json])))
+            [json.compat :as json]))
 
 (def ^:private label-map
   {"Place"    ":place"   "Road"         ":road"       "Railway"     ":railway"

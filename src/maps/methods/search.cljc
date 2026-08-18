@@ -12,7 +12,7 @@
 
   Portable .cljc."
   (:require [clojure.string :as str]
-            #?(:clj [cheshire.core :as json])))
+            [json.compat :as json]))
 
 (def ^:private max-prefix 12)
 (def ^:private query-nsid "com.etzhayyim.apps.kotoba.graph.sparql")
