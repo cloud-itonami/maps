@@ -1,7 +1,7 @@
 (ns maps.methods.bpmn-xml
   "Pure BPMN 2.0 XML parser — regex-based, dependency-free.
    Produces a process-def map keyed by keyword node-ids."
-  (:require [clojure.string :as str]))
+  (:require [kotoba.lang.text :as str]))
 
 (defn- get-attr
   "Extract a double-quoted attribute value from an XML element string."

@@ -16,7 +16,7 @@
   unit-tested; the gated network push (persist-vision! / persist-links!) is
   host-only behind #?(:clj ...) and reuses ingest/push-batch + the maps G7
   operator gate."
-  (:require [clojure.string :as str]
+  (:require [kotoba.lang.text :as str]
             [maps.methods.ingest :as ingest]))
 
 (def repo "did:web:maps.etzhayyim.com")

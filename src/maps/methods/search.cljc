@@ -11,7 +11,7 @@
     - tests: in-memory KotobaLocal atom
 
   Portable .cljc."
-  (:require [clojure.string :as str]
+  (:require [kotoba.lang.text :as str]
             [json.compat :as json]))
 
 (def ^:private max-prefix 12)
@@ -25,7 +25,7 @@
         (<= 0xFF66 o 0xFF9D)))) ; halfwidth katakana
 
 (defn- runs [name]
-  (let [s (str/lower-case (or (str name) ""))
+  (let [s (str/lower (or (str name) ""))
         out (transient []) buf (volatile! []) kind (volatile! nil)]
     (doseq [ch s]
       (let [k (cond (cjk? ch) :cjk

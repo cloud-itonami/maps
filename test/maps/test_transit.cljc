@@ -2,7 +2,7 @@
   "maps — transit method tests (ADR-2606064500). stdlib; network-free.
   1:1 Clojure port of `methods/test_transit.py`."
   (:require [clojure.test :refer [deftest is run-tests]]
-            [clojure.string :as str]
+            [kotoba.lang.text :as str]
             [maps.methods.transit   :as transit]
             [maps.tests.kotoba-local :as kl]))
 

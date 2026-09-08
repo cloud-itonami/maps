@@ -7,7 +7,7 @@
   The Python urllib `_post`/GET helpers are reimplemented as self-contained raw-socket HTTP
   (behind #?(:clj)), with inlined JSON. The __main__ runner is omitted."
   (:require [clojure.test :refer [deftest is use-fixtures]]
-            [clojure.string :as str]
+            [kotoba.lang.text :as str]
             [maps.methods.ingest :as ingest]
             #?(:clj [maps.methods.kotoba-local-server :as kls])))
 
@@ -95,7 +95,7 @@
          (loop [cl 0]
            (let [l (read-line-crlf in)]
              (if (or (nil? l) (= l "")) [code cl]
-                 (recur (if (str/starts-with? (str/lower-case l) "content-length:")
+                 (recur (if (str/starts-with? (str/lower l) "content-length:")
                           (Integer/parseInt (str/trim (subs l (inc (str/index-of l ":"))))) cl)))))))
      (defn- request [method url body-map token]
        (let [u (java.net.URI. url) host (.getHost u) port (let [p (.getPort u)] (if (pos? p) p 80))

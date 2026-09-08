@@ -5,7 +5,7 @@
   node, no reify): a raw ServerSocket serves a single canned HTTP response.
   #?(:clj ...) — JVM/bb only."
   (:require [clojure.test :refer [deftest is]]
-            [clojure.string :as str]
+            [kotoba.lang.text :as str]
             [maps.methods.maps3d-net-tasks :as n]))
 
 #?(:clj
@@ -28,7 +28,7 @@
                                  (let [l (.readLine rdr)]
                                    (if (and l (not= l "")) (recur (conj acc l)) acc)))
                           cl (some (fn [h]
-                                     (when (str/starts-with? (str/lower-case h) "content-length:")
+                                     (when (str/starts-with? (str/lower h) "content-length:")
                                        (Integer/parseInt (str/trim (subs h (inc (.indexOf h ":")))))))
                                    hdrs)]
                       ;; read the FULL request body before replying (avoid resetting

@@ -6,7 +6,7 @@
   nodes, so the two cannot silently drift apart. #?(:clj ...) — file I/O at the
   edge; resolves the repo root from *file*."
   (:require [clojure.test :refer [deftest is]]
-            [clojure.string :as str]
+            [kotoba.lang.text :as str]
             [clojure.set :as set]
             [maps.methods.maps3d-bpmn :as b]
             #?(:clj [clojure.java.io :as io])))

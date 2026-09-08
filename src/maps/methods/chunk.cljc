@@ -9,7 +9,7 @@
     - tests: in-memory KotobaLocal
 
   Portable .cljc."
-  (:require [clojure.string :as str]
+  (:require [kotoba.lang.text :as str]
             [json.compat :as json]))
 
 (def ^:private label-map
@@ -27,7 +27,7 @@
     (if (str/starts-with? s ":")
       s
       (or (get label-map s)
-          (str ":" (-> s str/trim str/lower-case (str/replace " " "-")))))))
+          (str ":" (-> s str/trim str/lower (str/replace " " "-")))))))
 
 (defn- first-claim [claims pred]
   (some #(when (= (get % "pred") pred) (get % "value")) claims))

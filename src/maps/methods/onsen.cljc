@@ -24,7 +24,7 @@
          every signal is a public place-fact (spring type, notability, amenities) —
          NO per-person affect/profile/engagement metric, NO dark pattern, fully
          transparent and recomputable from the stored tags (mirrors shiori's G1)."
-  (:require [clojure.string :as str]
+  (:require [kotoba.lang.text :as str]
             [maps.methods.ingest :as ingest]
             [maps.methods.reverse :as rev]))
 

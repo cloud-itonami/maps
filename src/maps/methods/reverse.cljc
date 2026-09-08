@@ -13,7 +13,7 @@
 
   query-fn abstraction: (fn [pred objects limit] → entity-seq).
   Portable .cljc."
-  (:require [clojure.string :as str]))
+  (:require [kotoba.lang.text :as str]))
 
 (def ^:private earth-r 6371000.0)
 
