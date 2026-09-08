@@ -10,7 +10,7 @@
   raw-socket HTTP/1.1 server (java.net.ServerSocket), behind #?(:clj ...) since it is host I/O.
   `serve` returns a server map {:socket :port :store :token}; start it with `serve-forever`,
   stop it with `shutdown`. JSON is inlined. The __main__ CLI is omitted."
-  (:require [clojure.string :as str]
+  (:require [kotoba.lang.text :as str]
             [maps.methods.kotoba-local :as kl]))
 
 ;; ── inlined JSON ──────────────────────────────────────────────────────────────
@@ -135,7 +135,7 @@
                        (if (or (nil? l) (= l ""))
                          [hs cl]
                          (let [ci (str/index-of l ":")
-                               k (str/lower-case (str/trim (subs l 0 ci)))
+                               k (str/lower (str/trim (subs l 0 ci)))
                                v (str/trim (subs l (inc ci)))]
                            (recur (assoc hs k v)
                                   (if (= k "content-length") (Integer/parseInt v) cl))))))

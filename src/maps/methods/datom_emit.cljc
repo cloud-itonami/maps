@@ -17,7 +17,7 @@
 
   House style: keyword strings stay ':ns/name' strings (not Clojure keywords);
   pure fns; file I/O only at the #?(:clj) edge. Portable .cljc."
-  (:require [clojure.string :as str]
+  (:require [kotoba.lang.text :as str]
             [maps.methods.analyze :as analyze]))
 
 ;; Emission order of :feature/* attributes (mirrors Python's to_kg_batch claim order).

@@ -4,7 +4,7 @@
   sample fixtures); a hand-written parser/encoder is bug-prone at the edges
   (escapes, unicode, nested, ints vs floats), so cover them directly."
   (:require [clojure.test :refer [deftest is]]
-            [clojure.string :as str]
+            [kotoba.lang.text :as str]
             [maps.methods.ingest :as ingest]))
 
 ;; ── json-encode (scalar + container types) ───────────────────────────────────

@@ -14,7 +14,7 @@
   query-fn: an explicitly injected (fn [pred objects limit] → entity-seq).
   Hosted callers may build it with maps.methods.search/http-avet-fn.
   Portable .cljc."
-  (:require [clojure.string :as str]))
+  (:require [kotoba.lang.text :as str]))
 
 (defn- claims-map [entity]
   (reduce (fn [m c] (assoc m (get c "pred") (get c "value")))

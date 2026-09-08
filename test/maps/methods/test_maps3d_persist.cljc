@@ -4,7 +4,7 @@
   builders run everywhere, the gate-refusal test is #?(:clj ...) (binds
   ingest/*getenv* so the gate is exercised without a live kotoba node)."
   (:require [clojure.test :refer [deftest is]]
-            [clojure.string :as str]
+            [kotoba.lang.text :as str]
             [maps.methods.ingest :as ingest]
             [maps.methods.maps3d-persist :as p]))
 

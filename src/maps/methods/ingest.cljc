@@ -12,7 +12,7 @@
     G9 — a feature is a PLACED THING, never a person.
 
   Portable .cljc."
-  (:require [clojure.string :as str]
+  (:require [kotoba.lang.text :as str]
             [maps.methods.search :as search-ns]))
 
 ;; H3 resolutions the client queries (zoom→LOD ladder, mirrors ontology §2).
@@ -135,7 +135,7 @@
 
 (defn normalize-label [s]
   (or (get label-map (str s))
-      (str ":" (-> (str s) str/trim str/lower-case (str/replace " " "-")))))
+      (str ":" (-> (str s) str/trim str/lower (str/replace " " "-")))))
 
 (defn normalize-row
   "One legacy vertex_spatial row → a kotoba :feature/* map (+ H3 cell stubs).

@@ -13,7 +13,7 @@
   *llm-json* / *llm-vision* / *sleep!*). The #?(:clj ...) defaults perform the
   real HTTP via java.net and reuse ingest's JSON codec; the LLM seams default to
   throwing so an operator MUST inject a Murakumo client (no silent no-op)."
-  (:require [clojure.string :as str]
+  (:require [kotoba.lang.text :as str]
             [maps.methods.ingest :as ingest]))
 
 ;; ── injectable I/O seams ─────────────────────────────────────────────────────

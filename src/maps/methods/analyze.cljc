@@ -13,7 +13,7 @@
 
   House style: Python ':…' keyword strings stay strings; pure fns; file I/O
   only at edges via #?(:clj …). Portable .cljc."
-  (:require [clojure.string :as str]))
+  (:require [kotoba.lang.text :as str]))
 
 ;; ── minimal EDN reader (subset: [] {} :kw \"str\" num bool nil) ─────────────────
 (def ^:private tok-re

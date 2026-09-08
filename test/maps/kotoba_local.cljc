@@ -7,7 +7,7 @@
 
   The query-fn produced by `make-query-fn` has the same signature as all
   maps method query-fns: (fn [pred objects limit] → entity-seq)."
-  (:require [clojure.string :as str]))
+  (:require [kotoba.lang.text :as str]))
 
 (defn make-store
   "Return a fresh in-memory store atom: {:eavt {sid {pred [val]}} :avet {[pred val] #{sids}}}."

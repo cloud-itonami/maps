@@ -3,7 +3,7 @@
   Exercises the pure stages (overpass-ql / parse-overpass / score-onsen) and the read-path
   `recommend` against the in-memory kotoba-local AVET store — no Overpass, no HTTP."
   (:require [clojure.test :refer [deftest is run-tests]]
-            [clojure.string :as str]
+            [kotoba.lang.text :as str]
             [maps.methods.onsen    :as onsen]
             [maps.tests.kotoba-local :as kl]))
 

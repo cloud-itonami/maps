@@ -21,7 +21,7 @@
   unit-tested); the live-node push behind #?(:clj ...). Task execution is
   injected as a handler map (task-type → fn(vars) → output-map) so the real
   maps3d clj/py task implementations — or test stubs — plug in unchanged."
-  (:require [clojure.string :as str]
+  (:require [kotoba.lang.text :as str]
             [maps.methods.kotoba-local :as kl]
             [maps.methods.maps3d-tasks :as tasks]
             #?(:clj [maps.methods.ingest :as ingest])))

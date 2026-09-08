@@ -2,7 +2,7 @@
   "maps — analyze + datom-emit + coverage-report tests (ADR-2606064500).
   1:1 Clojure port of `methods/test_methods.py` (TestAnalyze) +
   datom-emit and coverage-report smoke tests. stdlib; network-free."
-  (:require [clojure.test :refer [deftest is run-tests]]
+  (:require [kotoba.lang.text] [clojure.test :refer [deftest is run-tests]]
             [clojure.java.io :as io]
             [maps.methods.analyze         :as analyze]
             [maps.methods.datom-emit      :as datom-emit]
@@ -52,15 +52,15 @@
   (let [[features _ _] (analyze/classify (analyze/load-edn seed-path))
         a (analyze/analyze features [] {})
         rep (analyze/render-report features a)]
-    (is (clojure.string/includes? rep "coverage report"))
-    (is (clojure.string/includes? rep "res-6"))))
+    (is (kotoba.lang.text/includes? rep "coverage report"))
+    (is (kotoba.lang.text/includes? rep "res-6"))))
 
 (deftest test-render-datoms
   (let [[features _ _] (analyze/classify (analyze/load-edn seed-path))
         a (analyze/analyze features [] {})
         d (analyze/render-datoms a)]
-    (is (clojure.string/includes? d ":coverage/feature-count"))
-    (is (clojure.string/includes? d ":coverage/derived true"))))
+    (is (kotoba.lang.text/includes? d ":coverage/feature-count"))
+    (is (kotoba.lang.text/includes? d ":coverage/derived true"))))
 
 (deftest test-datom-emit-structure
   (let [[features rels aliases] (analyze/classify (analyze/load-edn seed-path))
@@ -69,20 +69,20 @@
     (is (seq derived) "expected derived datoms")
     ;; Every ground datom string starts with [
     (doseq [d ground]
-      (is (clojure.string/starts-with? d "[") (str "bad datom: " d)))
+      (is (kotoba.lang.text/starts-with? d "[") (str "bad datom: " d)))
     ;; No ground datom claims :bond/is-transient
     (doseq [d ground]
-      (is (not (clojure.string/includes? d "is-transient")) (str "ground datom claims transient: " d)))
+      (is (not (kotoba.lang.text/includes? d "is-transient")) (str "ground datom claims transient: " d)))
     ;; All derived datoms declare :bond/is-transient true
     (doseq [d derived]
-      (is (clojure.string/includes? d "is-transient") (str "derived datom missing transient: " d)))))
+      (is (kotoba.lang.text/includes? d "is-transient") (str "derived datom missing transient: " d)))))
 
 (deftest test-coverage-report-has-gaps-section
   (let [[features rels aliases] (analyze/classify (analyze/load-edn seed-path))
         rep (coverage-report/report features rels aliases)]
-    (is (clojure.string/includes? rep "gap") "expected gap mention in coverage report")
-    (is (clojure.string/includes? rep "G3") "expected G3 honesty note")
-    (is (clojure.string/includes? rep "G9") "expected G9 feature-not-person note")))
+    (is (kotoba.lang.text/includes? rep "gap") "expected gap mention in coverage report")
+    (is (kotoba.lang.text/includes? rep "G3") "expected G3 honesty note")
+    (is (kotoba.lang.text/includes? rep "G9") "expected G9 feature-not-person note")))
 
 #?(:clj
    (when (= *ns* (find-ns 'maps.tests.test-analyze))

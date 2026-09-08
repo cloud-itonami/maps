@@ -6,7 +6,7 @@
   naming thin/missing buckets. Coverage of the real world is ~0 by design (bounded
   :representative seed); this makes the covered backbone measurable and names
   the next wave. Pure fns; reuses analyze. Portable .cljc."
-  (:require [clojure.string :as str]
+  (:require [kotoba.lang.text :as str]
             [maps.methods.analyze :as analyze]))
 
 (def label-expected

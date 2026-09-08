@@ -10,7 +10,7 @@
   instance state). Functions take the store atom explicitly (Python `self`). Maps stay
   string-keyed; ':feature/label' style keywords are kept AS strings, exactly like Python.
   Pure (in-memory only); no host I/O."
-  (:require [clojure.string :as str]))
+  (:require [kotoba.lang.text :as str]))
 
 (defn new-store
   "KotobaLocal.__init__ — a fresh in-memory store.
