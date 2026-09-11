@@ -9,7 +9,7 @@ under `wire/`: JSON lexicons and fixtures, JSON-LD actor metadata, and BPMN.
 Runtime code lives in `src/maps/`; tests mirror it under `test/maps/`.
 The retained Rust component is under `rust/` and is not a deprecated language twin.
 
-Run `bb test` and `bb audit` before publishing.
+Run `kbb -M:test` and `kbb -M:audit` before publishing.
 
 The standalone suite excludes two retained cross-repository integration guards:
 `test_bpmn_generic.cljc` needs jp-ashiba and govUSA-PA contracts, while

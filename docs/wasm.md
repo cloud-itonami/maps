@@ -31,7 +31,7 @@ const out = JSON.parse(Buffer.from(instance.exports.memory.buffer, ptr, len).toS
 ## Build
 
 ```
-bb build.clj      # cargo → wasm32 → strip → validate → node invariant check → CID
+kbb build.cljk      # cargo → wasm32 → strip → validate → node invariant check → CID
 ```
 
 Produces `dist/maps-core.wasm` + `dist/maps-core.cid`. The CID is recorded in
