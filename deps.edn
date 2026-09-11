@@ -36,5 +36,5 @@
          :coverage-report "src/maps/methods/coverage_report.cljk"
          :onsen         "src/maps/methods/onsen.cljk"}
  :tests {:count 62
-         :runner "bb test"
+         :runner "kbb -M:test"
          :network false}}

@@ -1,4 +1,4 @@
-#!/usr/bin/env bb
+#!/usr/bin/env kbb
 ;; maps-core T1 build — compact raw-CID browser-local wasm (shionome/tsumugi/kanae
 ;; pattern, ADR-2606015200). clj/bb runner (repo rule: no new first-party .sh under
 ;; 20-actors); shells out to system binaries (cargo/wasm-tools/node) via
