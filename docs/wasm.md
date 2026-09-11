@@ -1,7 +1,7 @@
 # maps 地図 — T1 WASM actor (`maps-core`)
 
 The **executable read-side face** of the maps onsen (温泉) recommender
-(`src/maps/methods/onsen.cljc`, ADR-2606064500), shipped as a
+(`src/maps/methods/onsen.cljk`, ADR-2606064500), shipped as a
 content-addressed browser-local WASM actor per the **ameno** execution model
 (ADR-2606014500 / 2606015200) — the same compact raw-CID T1 pattern as
 `shionome-core` / `tsumugi-core` / `kanae-core`.
