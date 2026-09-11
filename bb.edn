@@ -2,4 +2,4 @@
  {test {:doc "Run the standalone maps suite"
         :task (shell "bb -cp src:test -m maps.test-runner")}
   audit {:doc "Validate EDN and wire boundaries"
-         :task (shell "bb scripts/audit.clj")}}}
+         :task (shell "bb scripts/audit.cljk")}}}

@@ -25,16 +25,16 @@
          :g4_no_server_key true
          :g7_outward_gated true
          :g9_feature_not_person true}
- :cells {:analyze       "src/maps/methods/analyze.cljc"
-         :ingest        "src/maps/methods/ingest.cljc"
-         :chunk         "src/maps/methods/chunk.cljc"
-         :search        "src/maps/methods/search.cljc"
-         :reverse       "src/maps/methods/reverse.cljc"
-         :transit       "src/maps/methods/transit.cljc"
-         :verify        "src/maps/methods/verify.cljc"
-         :datom-emit    "src/maps/methods/datom_emit.cljc"
-         :coverage-report "src/maps/methods/coverage_report.cljc"
-         :onsen         "src/maps/methods/onsen.cljc"}
+ :cells {:analyze       "src/maps/methods/analyze.cljk"
+         :ingest        "src/maps/methods/ingest.cljk"
+         :chunk         "src/maps/methods/chunk.cljk"
+         :search        "src/maps/methods/search.cljk"
+         :reverse       "src/maps/methods/reverse.cljk"
+         :transit       "src/maps/methods/transit.cljk"
+         :verify        "src/maps/methods/verify.cljk"
+         :datom-emit    "src/maps/methods/datom_emit.cljk"
+         :coverage-report "src/maps/methods/coverage_report.cljk"
+         :onsen         "src/maps/methods/onsen.cljk"}
  :tests {:count 62
          :runner "bb test"
          :network false}}
