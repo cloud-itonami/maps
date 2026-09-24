@@ -4,7 +4,7 @@
   code path the seam-stubbed unit tests never run. Deterministic (no external
   node, no reify): a raw ServerSocket serves a single canned HTTP response.
   #?(:clj ...) — JVM/bb only."
-  (:require [clojure.test :refer [deftest is]]
+  (:require [kotoba.test :refer [deftest is]]
             [kotoba.lang.text :as str]
             [maps.methods.maps3d-net-tasks :as n]))
 

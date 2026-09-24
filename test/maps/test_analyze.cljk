@@ -2,7 +2,7 @@
   "maps — analyze + datom-emit + coverage-report tests (ADR-2606064500).
   1:1 Clojure port of `methods/test_methods.py` (TestAnalyze) +
   datom-emit and coverage-report smoke tests. stdlib; network-free."
-  (:require [kotoba.lang.text] [clojure.test :refer [deftest is run-tests]]
+  (:require [kotoba.lang.text] [kotoba.test :refer [deftest is run-tests]]
             [clojure.java.io :as io]
             [maps.methods.analyze         :as analyze]
             [maps.methods.datom-emit      :as datom-emit]

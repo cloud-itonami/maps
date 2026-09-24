@@ -1,7 +1,7 @@
 (ns maps.tests.test-reverse
   "maps — reverse-geocode + haversine tests (ADR-2606064500). stdlib; network-free.
   1:1 Clojure port of `methods/test_reverse.py`."
-  (:require [clojure.test :refer [deftest is run-tests]]
+  (:require [kotoba.test :refer [deftest is run-tests]]
             [maps.methods.reverse    :as reverse-ns]
             [maps.tests.kotoba-local :as kl]))
 

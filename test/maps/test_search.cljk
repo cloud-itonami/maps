@@ -1,7 +1,7 @@
 (ns maps.tests.test-search
   "maps — search method tests (ADR-2606064500). stdlib; network-free.
   1:1 Clojure port of test_methods.py (TestSearch) + test_methods.py tokenizer tests."
-  (:require [clojure.test :refer [deftest is run-tests]]
+  (:require [kotoba.test :refer [deftest is run-tests]]
             [maps.methods.search    :as search-ns]
             [maps.methods.ingest    :as ingest]
             [maps.tests.kotoba-local :as kl]))

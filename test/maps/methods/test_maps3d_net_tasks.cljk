@@ -2,7 +2,7 @@
   "Tests for the Clojure reimplementation of the maps3d network/LLM tasks. All
   I/O is exercised by rebinding the injectable seams (*http-get* / *http-post* /
   *llm-json* / *llm-vision* / *sleep!*) — no real Mapillary / COLMAP / Murakumo."
-  (:require [clojure.test :refer [deftest is]]
+  (:require [kotoba.test :refer [deftest is]]
             [maps.methods.maps3d-net-tasks :as n]
             [maps.methods.maps3d-tasks :as t]
             [maps.methods.maps3d-bpmn :as b]

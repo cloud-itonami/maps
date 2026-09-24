@@ -5,7 +5,7 @@
   XML and cross-checks the maps3d.* service-task types against the engine's task
   nodes, so the two cannot silently drift apart. #?(:clj ...) — file I/O at the
   edge; resolves the repo root from *file*."
-  (:require [clojure.test :refer [deftest is]]
+  (:require [kotoba.test :refer [deftest is]]
             [kotoba.lang.text :as str]
             [clojure.set :as set]
             [maps.methods.maps3d-bpmn :as b]

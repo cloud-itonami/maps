@@ -1,7 +1,7 @@
 (ns maps.tests.test-verify
   "maps — verify-reads tests (ADR-2606064500). stdlib; network-free.
   1:1 Clojure port of `methods/test_verify.py`."
-  (:require [clojure.test :refer [deftest is run-tests]]
+  (:require [kotoba.test :refer [deftest is run-tests]]
             [maps.methods.search    :as search-ns]
             [maps.methods.verify    :as verify]
             [maps.tests.kotoba-local :as kl]))
