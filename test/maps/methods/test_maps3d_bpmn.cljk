@@ -3,7 +3,7 @@
   (Zeebe-free). Drives the pure interpreter through every gateway branch with
   stub handlers, then asserts instance state lands in the kotoba Datom store and
   is queryable back (EAVT/AVET)."
-  (:require [clojure.test :refer [deftest is]]
+  (:require [kotoba.test :refer [deftest is]]
             [maps.methods.kotoba-local :as kl]
             [maps.methods.ingest :as ingest]
             [maps.methods.maps3d-bpmn :as b]))

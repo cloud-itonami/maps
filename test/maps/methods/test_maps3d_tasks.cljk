@@ -2,7 +2,7 @@
   "Tests for the maps3d Datomic BPMN task handlers + the durable, append-only
   drive!/replay execution + the Datalog pending-tile entry. Everything runs over
   the offline kotoba-local Datom store — no Zeebe, no network."
-  (:require [clojure.test :refer [deftest is]]
+  (:require [kotoba.test :refer [deftest is]]
             [maps.methods.kotoba-local :as kl]
             [maps.methods.maps3d-tasks :as t]
             [maps.methods.maps3d-bpmn :as b]))

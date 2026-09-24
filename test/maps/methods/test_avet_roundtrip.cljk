@@ -6,7 +6,7 @@
   The TestAvetRealH3 layer is @unittest.skipUnless(_HAS_H3) and `h3` is unavailable on this host,
   so — exactly as the Python suite does without h3 — it is omitted here. The Python __main__
   runner is omitted."
-  (:require [clojure.test :refer [deftest is]]
+  (:require [kotoba.test :refer [deftest is]]
             [clojure.set :as set]
             [maps.methods.kotoba-local :as kl]))
 

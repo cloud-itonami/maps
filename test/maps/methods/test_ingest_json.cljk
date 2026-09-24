@@ -3,7 +3,7 @@
   ingest.cljc. These are exercised only incidentally by test_methods (via the
   sample fixtures); a hand-written parser/encoder is bug-prone at the edges
   (escapes, unicode, nested, ints vs floats), so cover them directly."
-  (:require [clojure.test :refer [deftest is]]
+  (:require [kotoba.test :refer [deftest is]]
             [kotoba.lang.text :as str]
             [maps.methods.ingest :as ingest]))
 

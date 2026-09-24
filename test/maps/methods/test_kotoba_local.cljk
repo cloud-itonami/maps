@@ -3,7 +3,7 @@
   the offline substrate the maps3d Datomic BPMN engine + the spatial getChunk
   hot-path rely on. Previously had no test file; this covers ingest, EAVT
   materialize, AVET probes (cell + wire), filters, limits, and introspection."
-  (:require [clojure.test :refer [deftest is]]
+  (:require [kotoba.test :refer [deftest is]]
             [maps.methods.kotoba-local :as kl]))
 
 (defn- batch [& ents] {"entities" (vec ents)})

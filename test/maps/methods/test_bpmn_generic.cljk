@@ -1,5 +1,5 @@
 (ns maps.methods.test-bpmn-generic
-  (:require [clojure.test :refer [deftest is]]
+  (:require [kotoba.test :refer [deftest is]]
             [maps.methods.bpmn-xml :as bxml]
             [maps.methods.bpmn-run :as brun]
             #?(:clj [clojure.java.io :as io])))

@@ -1,7 +1,7 @@
 (ns maps.tests.test-ingest
   "maps — ingest method tests (ADR-2606064500). stdlib; network-free.
   1:1 Clojure port of `methods/test_methods.py` (TestIngest)."
-  (:require [clojure.test :refer [deftest is run-tests]]
+  (:require [kotoba.test :refer [deftest is run-tests]]
             [clojure.java.io :as io]
             [maps.methods.ingest :as ingest]))
 
