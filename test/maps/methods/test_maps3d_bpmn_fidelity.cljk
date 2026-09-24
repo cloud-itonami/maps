@@ -7,7 +7,7 @@
   edge; resolves the repo root from *file*."
   (:require [kotoba.test :refer [deftest is]]
             [kotoba.lang.text :as str]
-            [clojure.set :as set]
+            [kotoba.lang.coll :as set]
             [maps.methods.maps3d-bpmn :as b]
             #?(:clj [clojure.java.io :as io])))
 
