@@ -2,7 +2,7 @@
   "maps — ingest method tests (ADR-2606064500). stdlib; network-free.
   1:1 Clojure port of `methods/test_methods.py` (TestIngest)."
   (:require [kotoba.test :refer [deftest is run-tests]]
-            [clojure.java.io :as io]
+            [kotoba.io :as io]
             [maps.methods.ingest :as ingest]))
 
 (def sample-path (str (io/file "wire" "ingest" "sample-vertex-spatial.json")))

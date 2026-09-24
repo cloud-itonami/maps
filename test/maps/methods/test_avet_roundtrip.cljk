@@ -7,7 +7,7 @@
   so — exactly as the Python suite does without h3 — it is omitted here. The Python __main__
   runner is omitted."
   (:require [kotoba.test :refer [deftest is]]
-            [clojure.set :as set]
+            [kotoba.lang.coll :as set]
             [maps.methods.kotoba-local :as kl]))
 
 (def ^:private cell-res [2 4 6 8 10 12])

@@ -3,7 +3,7 @@
   1:1 Clojure port of `methods/test_methods.py` (TestAnalyze) +
   datom-emit and coverage-report smoke tests. stdlib; network-free."
   (:require [kotoba.lang.text] [kotoba.test :refer [deftest is run-tests]]
-            [clojure.java.io :as io]
+            [kotoba.io :as io]
             [maps.methods.analyze         :as analyze]
             [maps.methods.datom-emit      :as datom-emit]
             [maps.methods.coverage-report :as coverage-report]))
