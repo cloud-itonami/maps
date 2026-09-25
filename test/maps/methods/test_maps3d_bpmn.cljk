@@ -3,7 +3,7 @@
   (Zeebe-free). Drives the pure interpreter through every gateway branch with
   stub handlers, then asserts instance state lands in the kotoba Datom store and
   is queryable back (EAVT/AVET)."
-  (:require [kotoba.test :refer [deftest is]]
+  (:require [kotoba.lang.error :as kerror] [kotoba.test :refer [deftest is]]
             [maps.methods.kotoba-local :as kl]
             [maps.methods.ingest :as ingest]
             [maps.methods.maps3d-bpmn :as b]))
@@ -72,17 +72,17 @@
 
 (deftest test-drive-live-refuses-without-gate
   (binding [ingest/*getenv* (fn [_] nil)]
-    (is (thrown-with-msg? clojure.lang.ExceptionInfo #"G7"
+    (is (thrown-with-msg? kerror/ExceptionInfo #"G7"
           (b/drive-live! nil (b/start-instance "t" "r") {})))))
 
 (deftest test-drive-live-refuses-without-credentials
   (binding [ingest/*getenv* (fn [k] (when (= k "MAPS_OPERATOR_GATE") "1"))]
-    (is (thrown-with-msg? clojure.lang.ExceptionInfo #"KOTOBA_AUTH"
+    (is (thrown-with-msg? kerror/ExceptionInfo #"KOTOBA_AUTH"
           (b/drive-live! nil (b/start-instance "t" "r") {})))))
 
 (deftest test-push-instance-refuses-without-gate
   (binding [ingest/*getenv* (fn [_] nil)]
-    (is (thrown-with-msg? clojure.lang.ExceptionInfo #"G7"
+    (is (thrown-with-msg? kerror/ExceptionInfo #"G7"
           (b/push-instance! nil (b/start-instance "t" "r"))))))
 
 ;; ── drive-live! / push-instance! success push paths (gate satisfied, no net) ──

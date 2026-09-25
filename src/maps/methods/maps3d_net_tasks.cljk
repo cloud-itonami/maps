@@ -13,7 +13,7 @@
   *llm-json* / *llm-vision* / *sleep!*). The #?(:clj ...) defaults perform the
   real HTTP via java.net and reuse ingest's JSON codec; the LLM seams default to
   throwing so an operator MUST inject a Murakumo client (no silent no-op)."
-  (:require [kotoba.lang.text :as str]
+  (:require [kotoba.bytes :as kbytes] [kotoba.lang.text :as str]
             [maps.methods.ingest :as ingest]))
 
 ;; ── injectable I/O seams ─────────────────────────────────────────────────────
@@ -33,7 +33,7 @@
            raw-path (.getRawPath u)
            query (.getRawQuery u)
            path (str (if (str/blank? raw-path) "/" raw-path) (when query (str "?" query)))
-           bb (when body (.getBytes ^String body "UTF-8"))
+           bb (when body (kbytes/utf8-bytes ^String body))
            sock (if https?
                   (.createSocket (javax.net.ssl.SSLSocketFactory/getDefault))
                   (java.net.Socket.))]
@@ -47,13 +47,13 @@
            (doseq [[k v] headers] (.append req (str (name k) ": " v "\r\n")))
            (when bb (.append req (str "content-type: application/json\r\nContent-Length: " (count bb) "\r\n")))
            (.append req "\r\n")
-           (.write out (.getBytes (.toString req) "UTF-8"))
+           (.write out (kbytes/utf8-bytes (.toString req)))
            (when bb (.write out bb))
            (.flush out)
            (let [baos (java.io.ByteArrayOutputStream.)
                  buf (byte-array 4096)]
              (loop [] (let [r (.read in buf)] (when (>= r 0) (.write baos buf 0 r) (recur))))
-             (let [resp (String. (.toByteArray baos) "UTF-8")
+             (let [resp (kbytes/utf8-string (.toByteArray baos))
                    idx (.indexOf resp "\r\n\r\n")
                    body-str (if (>= idx 0) (subs resp (+ idx 4)) "")]
                (or (try (ingest/parse-json body-str) (catch Exception _ nil)) {}))))
