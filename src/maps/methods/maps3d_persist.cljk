@@ -16,7 +16,7 @@
   unit-tested; the gated network push (persist-vision! / persist-links!) is
   host-only behind #?(:clj ...) and reuses ingest/push-batch + the maps G7
   operator gate."
-  (:require [kotoba.lang.text :as str]
+  (:require [kotoba.bytes :as kbytes] [kotoba.lang.text :as str]
             [maps.methods.ingest :as ingest]))
 
 (def repo "did:web:maps.etzhayyim.com")
@@ -34,7 +34,7 @@
   (let [s (str/join "" (map str parts))]
     #?(:clj
        (let [md (java.security.MessageDigest/getInstance "SHA-256")
-             bs (.digest md (.getBytes s "UTF-8"))]
+             bs (.digest md (kbytes/utf8-bytes s))]
          (subs (apply str (map #(format "%02x" (bit-and % 0xff)) bs)) 0 16))
        :default
        ;; portable fallback (cljs / sci): stable but not sha256 — JVM/bb is the

@@ -4,7 +4,7 @@
   code path the seam-stubbed unit tests never run. Deterministic (no external
   node, no reify): a raw ServerSocket serves a single canned HTTP response.
   #?(:clj ...) — JVM/bb only."
-  (:require [kotoba.test :refer [deftest is]]
+  (:require [kotoba.bytes :as kbytes] [kotoba.test :refer [deftest is]]
             [kotoba.lang.text :as str]
             [maps.methods.maps3d-net-tasks :as n]))
 
@@ -39,12 +39,12 @@
                             (when (< off cl)
                               (let [r (.read rdr buf off (- cl off))]
                                 (when (pos? r) (recur (+ off r))))))))
-                      (let [bs (.getBytes ^String body "UTF-8")
+                      (let [bs (kbytes/utf8-bytes ^String body)
                             head (str "HTTP/1.1 " status "\r\n"
                                       "Content-Type: application/json\r\n"
                                       "Content-Length: " (count bs) "\r\n"
                                       "Connection: close\r\n\r\n")]
-                        (.write out (.getBytes head "UTF-8"))
+                        (.write out (kbytes/utf8-bytes head))
                         (.write out bs)
                         (.flush out))))
                   (catch Exception _ nil)
