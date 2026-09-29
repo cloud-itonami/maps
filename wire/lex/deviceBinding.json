@@ -1,7 +1,7 @@
 {
   "lexicon": 1,
   "id": "com.etzhayyim.maps.deviceBinding",
-  "description": "Physical-device-to-asset binding record. Connects a Device feature (sensor / actuator / camera / charger / etc.) to the PhysicalAsset / Building / BuildingFloor it monitors or actuates. Append-only TID-keyed; revisions = new record with `supersededByUri`. Per maps CLAUDE.md §Digital Twin + ADR-2605231400.",
+  "description": "Physical-device-to-asset binding record. Connects a Device feature (sensor / actuator / camera / charger / etc.) to the PhysicalAsset / Building / BuildingFloor it monitors or actuates. Append-only TID-keyed; revisions = new record with `supersededByUri`. Per maps AGENTS.md §Digital Twin + ADR-2605231400.",
   "defs": {
     "main": {
       "type": "record",

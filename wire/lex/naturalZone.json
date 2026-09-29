@@ -1,7 +1,7 @@
 {
   "lexicon": 1,
   "id": "com.etzhayyim.maps.naturalZone",
-  "description": "Natural zone record — Köppen climate (5), WWF biome (14), or tectonic plate (15) = 34 canonical zones per maps CLAUDE.md §Layer 3. Constants under decadal revision cadence. Per ADR-2605231400 + maps MIGRATION-TODO Phase 1 (Tier A).",
+  "description": "Natural zone record — Köppen climate (5), WWF biome (14), or tectonic plate (15) = 34 canonical zones per maps AGENTS.md §Layer 3. Constants under decadal revision cadence. Per ADR-2605231400 + maps MIGRATION-TODO Phase 1 (Tier A).",
   "defs": {
     "main": {
       "type": "record",

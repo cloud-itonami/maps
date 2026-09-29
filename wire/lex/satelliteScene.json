@@ -1,7 +1,7 @@
 {
   "lexicon": 1,
   "id": "com.etzhayyim.maps.satelliteScene",
-  "description": "Satellite scene metadata record (Sentinel-2 / Landsat / Sentinel-1 SAR / HLS / Copernicus DEM / NAIP). Scene metadata + STAC item URL + bbox + cloud cover live here; the actual COG / JP2 / SAFE asset bytes are referenced via `payloadKind`: `stac-url` keeps the original external STAC asset URL (typical for ESA / USGS / NASA Earthdata), `datalad-pin` mirrors locally per ADR-2605241500, `ipfs` for direct IPFS-pinned assets. Per maps CLAUDE.md §Satellite Intelligence + Phase 3 Tier B.",
+  "description": "Satellite scene metadata record (Sentinel-2 / Landsat / Sentinel-1 SAR / HLS / Copernicus DEM / NAIP). Scene metadata + STAC item URL + bbox + cloud cover live here; the actual COG / JP2 / SAFE asset bytes are referenced via `payloadKind`: `stac-url` keeps the original external STAC asset URL (typical for ESA / USGS / NASA Earthdata), `datalad-pin` mirrors locally per ADR-2605241500, `ipfs` for direct IPFS-pinned assets. Per maps AGENTS.md §Satellite Intelligence + Phase 3 Tier B.",
   "defs": {
     "main": {
       "type": "record",
