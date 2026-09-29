@@ -1,7 +1,7 @@
 {
   "lexicon": 1,
   "id": "com.etzhayyim.maps.visionResult",
-  "description": "Murakumo Vision (qwen3-vl-8b) analysis output. Holds metadata only — the source image + raw analysis JSON live in a DataLad-managed dataset pinned to IPFS (per ADR-2605241500). The `payloadRef` discriminator names which storage backend holds the payload. Per maps CLAUDE.md §Vision Intelligence + Phase 3 Tier B (ADR-2605231400).",
+  "description": "Murakumo Vision (qwen3-vl-8b) analysis output. Holds metadata only — the source image + raw analysis JSON live in a DataLad-managed dataset pinned to IPFS (per ADR-2605241500). The `payloadRef` discriminator names which storage backend holds the payload. Per maps AGENTS.md §Vision Intelligence + Phase 3 Tier B (ADR-2605231400).",
   "defs": {
     "main": {
       "type": "record",

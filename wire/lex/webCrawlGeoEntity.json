@@ -1,7 +1,7 @@
 {
   "lexicon": 1,
   "id": "com.etzhayyim.maps.webCrawlGeoEntity",
-  "description": "Geo entity extracted from web crawl (WET/WAT records). Holds entity metadata + reference to the source crawl artifact (DataLad-pinned per ADR-2605241500 OR raw IPFS). Per maps CLAUDE.md §Web Crawl Geo Coverage + Phase 3 Tier B.",
+  "description": "Geo entity extracted from web crawl (WET/WAT records). Holds entity metadata + reference to the source crawl artifact (DataLad-pinned per ADR-2605241500 OR raw IPFS). Per maps AGENTS.md §Web Crawl Geo Coverage + Phase 3 Tier B.",
   "defs": {
     "main": {
       "type": "record",

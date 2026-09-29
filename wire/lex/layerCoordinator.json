@@ -1,7 +1,7 @@
 {
   "lexicon": 1,
   "id": "com.etzhayyim.maps.layerCoordinator",
-  "description": "KAMI visual layer coordinator DID record. 11 canonical layers per maps CLAUDE.md §Layer 1: tile / poi / route / infra / building / weather / sensor / transport / geography / satellite / event. Per ADR-2605231400 + maps MIGRATION-TODO Phase 1 (Tier A).",
+  "description": "KAMI visual layer coordinator DID record. 11 canonical layers per maps AGENTS.md §Layer 1: tile / poi / route / infra / building / weather / sensor / transport / geography / satellite / event. Per ADR-2605231400 + maps MIGRATION-TODO Phase 1 (Tier A).",
   "defs": {
     "main": {
       "type": "record",

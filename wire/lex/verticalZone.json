@@ -1,7 +1,7 @@
 {
   "lexicon": 1,
   "id": "com.etzhayyim.maps.verticalZone",
-  "description": "Altitude / depth band record — atmosphere (5), underground (4), or ocean (5) = 14 canonical zones per maps CLAUDE.md §Layer 3. Constants under ISIC-style infrequent revision. Per ADR-2605231400 + maps MIGRATION-TODO Phase 1 (Tier A).",
+  "description": "Altitude / depth band record — atmosphere (5), underground (4), or ocean (5) = 14 canonical zones per maps AGENTS.md §Layer 3. Constants under ISIC-style infrequent revision. Per ADR-2605231400 + maps MIGRATION-TODO Phase 1 (Tier A).",
   "defs": {
     "main": {
       "type": "record",

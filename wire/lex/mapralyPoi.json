@@ -1,7 +1,7 @@
 {
   "lexicon": 1,
   "id": "com.etzhayyim.maps.mapralyPoi",
-  "description": "Mapraly POI record. Holds POI metadata + photo references (DataLad-pinned per ADR-2605241500 or raw IPFS). Per maps CLAUDE.md §Mapraly Intelligence + Phase 3 Tier B.",
+  "description": "Mapraly POI record. Holds POI metadata + photo references (DataLad-pinned per ADR-2605241500 or raw IPFS). Per maps AGENTS.md §Mapraly Intelligence + Phase 3 Tier B.",
   "defs": {
     "main": {
       "type": "record",
